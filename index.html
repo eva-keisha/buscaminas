@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Buscaminas BOOM</h1>
+    </header>
+    <main>
+        <div class="top-bar"id="game-over-message" class="game-over-message" >
+            <div id="mine-counter">Minas: 0</div>
+            <p id="game-over-text"></p>
+            <button onclick="restartGame()" href="index.html">Aceptar</button>
+            <div id="timer">Tiempo: 0</div>
+       </div>
+        
+        <section id="start-screen" class="start-screen">
+            <p>Selecciona un tamaño de tablero personalizado o elige un nivel de dificultad:</p>
+            <div class="custom-options">
+                <h2>Personalizado</h2>
+                <label>Filas: <input type="number" id="rows-input" min="5" value="5"></label>
+                <label>Columnas: <input type="number" id="cols-input" min="5" value="5"></label>
+                <label>Minas: <input type="number" id="mines-input" min="1" value="5"></label>
+                <button onclick="startCustomGame()">Iniciar Juego </button>
+            </div>
+            <div class="difficulty-options">
+                <h2>Dificultad</h2>
+                <button onclick="startGame('facil')">Fácil</button>
+                <button onclick="startGame('medio')">Medio</button>
+                <button onclick="startGame('dificil')">Difícil</button>
+                <button onclick="startGame('muyDificil')">Muy Difícil</button>
+                <button onclick="startGame('hardcore')">Hardcore</button>
+                <button onclick="startGame('leyenda')">Leyenda</button>
+            </div>
+        </section>
+  
+        
+     <div class="game-container" id="game-board"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

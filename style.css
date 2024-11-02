@@ -1,0 +1,153 @@
+/* Estilos generales */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #061b3f;
+  color: #fafafa;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Barra superior */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.top-bar div {
+  display: flex;
+  align-items: center;
+}
+
+#mine-counter::before {
+  content: '🚩 ';
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+/* Pantalla de inicio */
+.start-screen {
+  background: linear-gradient(135deg, #f8b195, #f67280);
+  color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.custom-options, .difficulty-options {
+  margin-top: 15px;
+}
+
+/* Labels y campos de entrada */
+label {
+  font-size: 1em;
+  color: #fafafa;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  text-align: center;
+  margin-left: 5px;
+}
+
+/* Botones */
+button {
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+  color: #fafafa;
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+}
+
+/* Contenedor del juego */
+.game-container {
+  display: grid;
+  gap: 4px;
+  background: linear-gradient(135deg, #ffd3a5, #fd6585);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablero de juego */
+#game-board {
+  display: grid;
+  gap: 2px;
+  margin-top: 20px;
+}
+
+/* Celda */
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #a3d9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #333;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.cell.revealed {
+  background-color: #f2a5a5;
+}
+
+.cell.flag {
+  color: #e74c3c;
+}
+
+/* Mensaje de fin de juego */
+.game-over-message {
+  display: none;
+  background: linear-gradient(135deg, #f0c27b, #4b1248);
+  color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
